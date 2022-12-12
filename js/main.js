@@ -17,8 +17,18 @@ for (let index = 0; index < nombre.length; index++) {
         
     }
     console.log(letra, contFinal);
-    
 }
+let nombreinv= "Laura Aline";
+let inver = "";
+
+function invertido(){
+    for (let i=nombreinv.length-1; i>=0; i--){
+        inver += nombreinv[i];
+    }
+    return inver;
+}
+console.log(invertido ("Laura Aline"));
+    
 
 /*function charRep(string) {
     letra = string.toLowerCase();
