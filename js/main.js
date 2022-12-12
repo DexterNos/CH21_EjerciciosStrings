@@ -21,13 +21,25 @@ for (let index = 0; index < nombre.length; index++) {
 let nombreinv= "Laura Aline";
 let inver = "";
 
-function invertido(){
-    for (let i=nombreinv.length-1; i>=0; i--){
-        inver += nombreinv[i];
+function invertido(name){
+    for (let i=name.length-1; i>=0; i--){
+        inver += name[i];
+
     }
     return inver;
 }
-console.log(invertido ("Laura Aline"));
+
+function palindrome(word) {    
+    let l = word.length;
+    for (i = 0; i < l / 2; i++) {
+        if (word.charAt(i) !== word.charAt(l - 1 - i)) {
+            return false;
+        }
+    }
+    return true;
+}
+
+//console.log(invertido ("Laura Aline"));
     
 
 /*function charRep(string) {
