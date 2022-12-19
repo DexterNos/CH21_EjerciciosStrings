@@ -8,6 +8,7 @@ btnenviar.addEventListener("click", function(event){
     let exampleFormControlInput1 = document.getElementById("exampleFormControlInput1");
     let exampleFormControlTextarea1 = document.getElementById("exampleFormControlTextarea1");
     let alertError = document.getElementById("alertError");
+    let flexCheckDefault = document.getElementById("flexCheckDefault");
     let exampleFormControlInput2 = document.getElementById("exampleFormControlInput2")
     exampleFormControlTextarea1.value = exampleFormControlTextarea1.value.trim();
     alertError.style.display="none";
@@ -40,7 +41,13 @@ btnenviar.addEventListener("click", function(event){
     if ((idTimeout != undefined) && (idTimeout!=null)){
         clearTimeout(idTimeout);
     }
-    if (validos ==3){
+    //if Ternario
+    alertError.innerHTML += (!flexCheckDefault.checked)?"<br/>Debes aceptar los terminos y condiciones":"";
+
+    /*if (!flexCheckDefault.checked){
+        alertError.innerHTML += "<br/>Debes aceptar los terminos y condiciones";
+    }*/
+    if (validos == 3){
         setTimeout(function(){
             exampleFormControlInput1.style.border ="";
             exampleFormControlInput2.style.border="";
